@@ -1,23 +1,34 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
-const Header = () => {
+export const Header = () => {
   return (
-    <header className="bg-zinc-900 text-white shadow-md">
-      <nav className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
-        <Link to="/" className="text-xl font-black tracking-tighter text-cyan-400">
+    <header className="bg-zinc-900 text-black shadow-md">
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4">
+        <Link
+          to="/"
+          className="text-xl font-black tracking-tighter text-indigo-300"
+        >
           COSMOS<span className="text-white">.TS</span>
         </Link>
-        
-        <div className="flex gap-6 font-medium">
-          <Link to="/main" className="hover:text-cyan-400 transition">Главная</Link>
-          <Link to="/shema" className="hover:text-cyan-400 transition">Схема</Link>
-          <Link to="/effects" className="hover:text-cyan-400 transition">Эффекты</Link>
-          <Link to="/landscape" className="hover:text-cyan-400 transition">"Ландшафт</Link>
-          <Link to="/connections" className="hover:text-cyan-400 transition">"Связи</Link>
+
+        <div className="flex gap-6 font-medium text-indigo-200">
+          <Link to="/main" className="transition hover:text-indigo-300">
+            Главная
+          </Link>
+          <Link to="/shema" className="transition hover:text-indigo-300">
+            Схема
+          </Link>
+          <Link to="/effects" className="transition hover:text-indigo-300">
+            Эффекты
+          </Link>
+          <Link to="/landscape" className="transition hover:text-indigo-300">
+            Ландшафт
+          </Link>
+          <Link to="/connections" className="transition hover:text-indigo-300">
+            Связи
+          </Link>
         </div>
       </nav>
     </header>
-  );
-};
-
-export default Header;
+  )
+}
